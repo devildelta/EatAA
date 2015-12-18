@@ -13,7 +13,7 @@ android {
     compileSdkVersion 23;
     buildToolsVersion "23.0.2";
     defaultConfig {
-        minSdkVersion 13
+        minSdkVersion 16
     }
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES';
@@ -26,15 +26,16 @@ android {
 
 repositories {
     jcenter();
-    mavenCentral();
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
-    compile "com.android.support:support-v4:23.1.0"
-        compile "com.android.support:support-v13:23.1.0"
-        compile "com.fasterxml.jackson.core:jackson-core:2.+";
+    compile "com.android.support:support-v4:23.1.0";
+    compile "com.android.support:support-v13:23.1.0";
+    compile "com.fasterxml.jackson.core:jackson-core:2.+";
     compile 'org.roboguice:roboguice:3.+';
     provided 'org.roboguice:roboblender:3.+';
+    compile 'com.github.markrjr:Salut:v0.4.9';
 }
 
 task wrapper(type: Wrapper) {

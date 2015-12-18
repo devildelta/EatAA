@@ -36,16 +36,13 @@ public class Main extends RoboActivity {
             fragments.add(new MenusFragment());
             fragments.add(new ConnectFragment());
         }
-        @Override
-        public int getCount() {
+        @Override public int getCount() {
             return fragments.size();
         }
-        @Override
-        public Fragment getItem(int i) {
+        @Override public Fragment getItem(int i) {
             return fragments.get(i);
         }
-        @Override
-        public CharSequence getPageTitle (int i) {
+        @Override public CharSequence getPageTitle (int i) {
             return fragments.get(i).getTitle();
         }
     }

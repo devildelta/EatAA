@@ -1,0 +1,11 @@
+source $HOME/.screenrc
+
+screen -t tree 0 bash -c "bash -i <<< 'tree src/; exec </dev/tty'"
+split -v
+resize 50
+focus right
+screen -t editor 1 vim -c 'args src/**/*.java src/**/*.xml'
+split
+resize 35
+focus down
+screen -t build 2 bash
